@@ -1,0 +1,25 @@
+BRUKERHISTORIER:
+
+	Med i MVP:
+	
+	."Som utvikler er det viktig med god struktur i koden og godt mappeoppsett for å enkelt finne og endre kode"
+	."Som programmør er det viktig at jeg får en visuell representasjon av det jeg lager,
+		   sånn at jeg kan teste det manuelt."
+	."Som spiller er det viktig at kontrollene er responsive, sånn at jeg raskt kan se
+		   hvilke tastetrykk som fører til handling i spillet"
+	."Som spiller er det viktig med god visuell oversikt over b.la poengsum, bomber og andre status-verdier"
+	."Som spiller er det viktig at jeg får visuell indikasjon når spilleren tar skade,
+		   sånn at jeg kan reagere umiddelbart"
+	."Som litt svaksynt er det viktig at tekst ikke blir for liten på skjermen"	
+	."Som programmør er det viktig at koden dokumenteres godt, sånn at det blir enklere å forstå den" (java-Logging?)
+
+	
+	Ikke med i MVP:
+
+	."Som spiller er det viktig med gode lydeffekter for å skape engasjement og spenning rundt spillet"	
+	."Som spiller ønsker jeg at spillet skal ha multiplayer-funksjonen
+			slik at jeg kan spille spillet sammen med mine venner."
+   ."Som spiller forventer jeg at man kan endre karakterens utseende og fantasifulle
+         omgivelser og temaer, ettersom dette kan holde spillet friskt og spennende."
+   ."Som spiller ønsker jeg at man kan endre bombernes egenskaper, fordi dette vil gi
+         en mer strategisk spillopplevelse."

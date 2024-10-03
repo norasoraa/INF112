@@ -1,0 +1,43 @@
+ROLLEFORDELING:
+
+Programmering
+* Alle på gruppen har ansvar
+
+Team lead (Jostein)
+* Hvorfor: holde overordnet oversikt.
+* Jostein har tid og erfaring med spill-utvikling og team-lead.
+* Ansvar:
+   *Holder oversikt over prosjektet
+   *Holder oversikt over krav som skal oppnås
+   *Oversikt over hvilken dokumentasjon som må lages
+
+Sekretær (Nora)
+* Hvorfor: vi trenger å huske hva vi bestemte på møtene. Hvis ikke alle kan møte, 
+  kan de heller lese referat.
+* Ansvar:
+   *Skriver referat fra møter. Disse kan ligge på Discord
+
+Lyd-ansvarlig (Jostein)
+* Hvorfor: vi trenger noen som kan holde oversikt over lydene i prosjektet.
+* Jostein har erfaring med lyd/musikk til spill.
+* Ansvar:
+   *Finner / lager lyd til spillet
+   *Se til at vi ikke bryter opphavsrett
+   *Inkluder kilder ved behov
+
+Bilde-ansvarlig (Aida)
+* Hvorfor: vi trenger noen som kan holde oversikt over bildene i prosjektet.
+* Ansvar:
+   *Finner / lager bilder til spillet
+   *Se til at vi ikke bryter opphavsrett
+   *Inkluder kilder ved behov
+
+Discord-ansvarlig og Kundekontakt (Anders)
+* Hvorfor: vi trenger noen som kan ha ansvar for kanalene på Discord-gruppen.
+* Vi trenger noen som kan kommunisere med kunder (?)
+
+Test-ansvarlig (Guang og Inana)
+* Hvorfor: vi trenger noen som kan holde oversikt over testene vi har, og testene som må lages.
+
+Booking-ansvarlig (Guang)
+* Hvorfor: trenger noen som kan booke grupperom på mandager / torsdager

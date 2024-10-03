@@ -1,0 +1,27 @@
+RØFF BESKRIVELSE AV SPILLET:
+
+* Et 2D-kart som spilleren kan bevege seg i.
+    .Kun ett bilde (kamera står i ro)
+    .Vegger som spilleren ikke kan gå gjennom eller sprenge
+    .Oljetønner som kan sprenges vekk
+
+* Spillfigur som spilleren kan styre med piltastene.
+    .Kan gå opp, ned, til høyre og venstre.
+    .Kan ikke gå på skrå
+    .Kan legge ned bomber, som sprenger alle oljetønner innenfor en viss avstand.
+    .Kan legge ned max 2 bomber på en gang.
+
+* Spøkelser som beveger seg rundt, og kan skade spilleren hvis de kommer ani.
+    .Spøkelsene kan ikke gå gjennom vegger eller tønner
+    .Spøkelsene kan bli sprengt vekk av bombene.
+     Spilleren får da mer poeng
+
+* Powerups ligger inni noen av tønnene.
+    .Dukker opp når tønnen er sprengt.
+    .Powerups kan f.ex gi mer liv, større bombeeksplosjon, midlertidig uovervinnelighet etc.
+
+* Hvis spilleren mister all sine hitpoints, er spillet over, og score vises på skjermen.
+    .Spillet kan startes på nytt.
+
+* Global klokke som teller ned, og hvis tiden går ut før spilleren har drept alle spøkelsene, er spillet over.
+     .Spillet kan startes på nytt.

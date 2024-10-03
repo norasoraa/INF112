@@ -1,0 +1,60 @@
+FERDIGE KRAV:
+------------------------------------------
+
+Neste level kan startes når forrige level er ferdig
+   - Brukerhistorier:
+      ."Som spillutvikler ønsker jeg å ha flere nivåer, sånn at spillopplevelsen blir mer variert".
+      ."Som spiller er det viktig med en følelse av progresjon, f.ex ved at du kommer til et nytt nivå når forrige nivå er ferdig".
+   - Arbeidsoppgaver:
+      .Har en int som er currentLevel.
+      .Lag en goToNextLevel-metode i GameModel
+	      .Den skal kalle setLevel() med riktig navn.
+         .Ha f.ex en hashmap<Integer, String>, der vi mapper level-tallet til riktig filnavn.
+         .Hvis vi er på siste level -> loop tilbake til første level
+      .Må lage metode i View som kan kalles for å oppdatere cellSize etc, siden det nye GameBoard-objektet kan ha andre dimensjoner.
+         .Denne metoden må kalles når den neste levelen startes.
+   - Akseptansekriterier:
+      .Test - Sjekk at goToNextLevel fører til at currentLevel økes med +1 (med mindre det er siste level, og da skal den loope tilbake til level1).
+      .Test - Sjekk at goToNextLevel gjør at et nytt GameBoard lastes inn.
+
+
+Healthpoints vises som hjerter i stedet for et tall
+   - Brukerhistorier:
+      ."Som spiller ønsker jeg å se hjerter i stedet for tall for å representere mine healthpoints, slik at spillopplevelsen blir mer interessant".
+      ."Som spiller ønsker jeg å kunne se antall gjenværende hjerter tydelig, slik at det er lett å se når jeg mister healthpoints eller får et nytt liv".
+   - Arbeidsoppgaver:
+      .Lag en hjerte-sprite 25x25 px
+      .Lag en metode i GameView: drawPlayerHearts()
+         .Den skal tegne hjerter på skjermen som symboliserer antall liv spilleren har igjen
+         .Bruk en konstant til å definere størrelsen på bildet
+         .Metoden skal kalles i drawGame() metoden i GameView
+   - Akseptansekriterier:
+      .Manuell test - Ved oppstart av nytt level skal det vises tre hjerter under healthpoints på skjermen.
+      .Manuell test - Når spilleren tar skade skal et hjerte forsvinne under healthpoints på skjermen.
+      .Manuell test - Når spilleren plukker opp en hjerte-powerup skal det komme et nytt hjerte under healthpoints på skjermen.
+
+
+Ny hjerte-powerup
+   - Brukerhistorier:
+      ."Som spiller synes jeg det er kjekkere å kunne ha en powerup for et ekstra liv i spillet. På denne måten kan jeg forlenge spillopplevelsen."
+   - Arbeidsoppgaver:
+      .Legg til en ekstra powerup for hjerter i activate-metoden i PowerUp-klassen.
+         .Skal kalle increaseLife-metoden når spilleren har plukket opp en hjerte-powerup.
+      .Lag en increaseLife-metode i Player
+         .Det skal bli maks 3 hjerter som liv.
+         .Et ekstra liv skal bare legges til hvis healthpoints til spilleren er under 3.
+   - Akseptansekriterier:
+      .Test - Sjekk om spilleren har fått et ekstra liv etter å ha plukket opp en hjerte-powerup, med unntak av hvis spillerens healthpoints er på sin maks.
+
+Animasjoner
+   -Brukerhistorier:
+	   ."Som en spiller vil jeg se animasjoner for å forbedre spillopplevelsen og gjøre det tydeligere når handlinger utføres av spilleren og fiender".
+   Arbeidsoppgaver:
+	   .Legg til animasjonslogikk i GameView for å bytte mellom sprite-bilder i animasjonene.
+	   .Implementer en metode i GameView for å hente animasjoner basert på sprite-bilder.
+	   .Endre eksisterende kode for å bruke animasjonene i stedet for statiske bilder.
+   Akseptanskriterier
+	   .Visuell test - Sjekk at spillerens og fiendenes animasjon endres avhengig av retningen de beveger seg i.
+      .Visuell test - Sjekk at spilleren har egne animasjoner for å stå i ro og gå.
+	   .Visuell test - Sjekk at når en bombe eksploderer, skal det vises en animasjon for dette.
+	   .Visuell test - Sjekk at animasjonene for spilleren og fiendene er jevne og naturlige under bevegelse.

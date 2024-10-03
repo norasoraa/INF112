@@ -1,0 +1,56 @@
+SPESIFIKASJON:
+
+Kort beskrivelse av mål med appen:
+	.Å lage en spillbar klone av Bomberman med bilder, lyd, enkle kontroller, poeng,
+	 game over- og game finished-skjerm.
+	.Noe som er litt gøy å spille, har litt sjarm og personlighet.
+	.Skal funke bra uten bugs.
+
+Brukerhistorier:
+	.1: "Som utvikler er det viktig med god struktur i koden og godt mappeoppsett for å enkelt finne og endre kode"
+	.2: "Som programmør er det viktig at jeg får en visuell representasjon av det jeg lager,
+		   sånn at jeg kan teste det manuelt."
+	.3: "Som spiller er det viktig at kontrollene er responsive, sånn at jeg raskt kan se
+		   hvilke tastetrykk som fører til handling i spillet"
+	.4: "Som spiller er det viktig med god visuell oversikt over b.la poengsum, bomber og andre status-verdier"
+	.5: "Som spiller er det viktig at jeg får visuell indikasjon når spilleren tar skade,
+		   sånn at jeg kan reagere umiddelbart"
+	.6. "Som litt svaksynt er det viktig at tekst ikke blir for liten på skjermen"	
+	.7. "Som programmør er det viktig at koden dokumenteres godt, sånn at det blir enklere å forstå den" (java-Logging?)
+
+
+	(.Nora: "Som spiller er det viktig med gode lydeffekter for å skape engasjement og spenning rundt spillet")	
+	(.Guang: "Som spiller ønsker jeg at spillet skal ha multiplayer-funksjonen
+			slik at jeg kan spille spillet sammen med mine venner.")
+    	(.Guang: "Som spiller forventer jeg at man kan endre karakterens utseende og fantasifulle
+            omgivelser og temaer, ettersom dette kan holde spillet friskt og spennende.")
+    	(.Guang: "Som spiller ønsker jeg at man kan endre bombernes egenskaper, fordi dette vil gi
+            en mer strategisk spillopplevelse.")
+
+
+MVP:
+Enkel representasjon av kartet vises på skjermen (enkel grid).
+   * Trenger ikke å ha bilder, kun farger.
+	* Vegger vises i svart, tomme ruter i hvitt.
+Spiller, fiender, bomber og eksplosjoner representert visuelt
+   * Spiller vises i blått
+   * Tønner vises i grønt
+	* Bomber vises i rødt
+	* Eksplosjoner i gult
+   * Fiender står i ro (foreløpig)
+Spilleren kan legge ut bomber ved tastetrykk.
+   * Bomber har timer som teller ned, og eksploderer når timer = 0.
+	* Eksplosjon i alle retninger, lengde 2, stoppes av vegg.
+   * Hvis en eksplosjon kommer ani en fiende, dør fienden.
+Spilleren kan beveges med tastatur.
+   * Kan ikke gå ut av grid.
+   * Kan ikke gå inn i vegger
+   * Kan ikke gå inn i fiender.
+Spilleren kan ta skade:
+   * Hvis hen kommer ani eksplosjoner
+   * Hvis spilleren prøver å bevege seg inn på en fiende.
+Spilleren har HP, hvis spilleren dør slutter spillet.
+Hvis spilleren har drept alle fiendene = MÅL.
+Kan ha tekst som sier om spillet er i gang eller game-over etc.
+Kan ha global timer som teller ned.
+   * Hvis tiden går ut = game over

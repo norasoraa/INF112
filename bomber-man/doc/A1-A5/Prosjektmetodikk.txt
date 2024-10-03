@@ -1,0 +1,32 @@
+PROSJEKTMETODIKK
+
+* Vi har bestemt å bruke Kanban.
+   - Vi bruker Trello for å holde oversikt.
+   - Vi arbeider med max 2-3 arbeidsoppgaver av gangen.
+
+* Møtehyppighet - 2x / uke:
+   - Hver gruppetime på torsdag kl 14.15 - 16.00 (Høyteknologi-senteret)
+   - Hver mandag kl 10.00 - 12.00 (Realfagsbygget)
+
+* Foreløpig arbeidsmetodikk:
+   - Har brukt de felles møtene til å samkjøre, og bli enig om veien videre.
+   - Bruker trello til å holde oversikt over arbeidsoppgaver som må gjøres / holder på med.
+   - Diskuterer problemer i plenum og sørger for at alle blir enige.
+   - Tegner på tavlen / viser skjermbilde for å kommunisere ideer.
+   - Bruker Discord gruppechat for kommunikasjon mellom møtene.
+   - Har 'hjemmelekse' til neste møte, som alle kan jobbe med.
+   - Alle puller fra felles repo.
+   - Prøver å unngå at flere jobber i samme fil.
+      .Kan bli konflikter når vi pusher til felles repo.
+   
+* Tanker vi har gjort oss for fremtidig metodikk:
+   - Skal flere jobbe på samme klasse, i små team på 2-3 stk?
+      .Kan kanskje være lurt - flere sjekker at vi følger spesifikasjonene, 
+       og lettere å diskutere / oppdage bugs og potensielle problemer med koden.
+      .Kan også minne hverandre om å ta pauser (Pomodoro-technique: 25 min jobbing, 5 min pause)
+   - Bestemme Policy for når vi pusher til main?
+      .Sjekke at alt virker først (skrevet tester?).
+      .Gi beskjed til de andre når man har pushet.
+   Hvem skal lage tester?
+   Alle skal prøve litt parprogrammering (A4 i oppgaveteksten)
+

@@ -1,0 +1,173 @@
+Torsdag 11. april:
+    Tilstede:  Jostein, Aida, Nora, Guang, Anders, Inana
+
+    Gjort i dag:
+    - Gått gjennom krav og sjekket at alt er ferdigstilt
+    - Timer: hvordan få eksplosjonene til å pause når spillet er i pause
+    - Fikset testEnemyPlayerCollision()
+
+    Ingen oppgaver til neste gruppetime.
+
+
+Mandag 15. april
+    Tilstede: Jostein, Aida, Nora, Guang, Anders
+
+    Gjort i dag:
+    - Kartlagt hvilke funksjonaliteter vi vil implementere i siste sprint
+    - Diskutert implementasjoner for disse funksjonalitetene
+    - Fordelt arbeidsoppgaver
+
+    Arbeidsoppgaver for siste sprint:
+    0. Aida - Implementere nye timere for bomber og eksplosjoner.
+        .Ønsket atferd: timeren skal kunne stoppes/startes av modellen.
+
+    1. Anders - goToNextLevel-metode
+        .Når en level er ferdig -> kall denne metoden.
+        .Den skal igjen kalle setLevel() med riktig navn.
+        .Hvis vi er på siste level -> loop tilbake til første level
+
+        .Forslag til implementasjon:
+            .Ha en hashmap<Integer, String>, der vi mapper level-tallet til riktig filnavn.
+            .F.ex level1 legges inn ved: hashmap.put(1, [filnavn]), osv for de neste levelene.
+            .Har en int som er currentLevel.
+            .Når vi går til neste level tar vi currentLevel += 1, og kaller setLevel(hashMap.get(currentLevel))
+            .Når vi fullfører siste level -> ha en screen som viser "All Levels Finished, press ENTER to go to level 1".
+                (Må da ha en ny gamestate).
+
+    2. Når du plukker opp en powerup -> Vis tekst som forteller hva en powerup gjør
+        .?
+
+    3. Nora - Tekst som viser hvilken level vi er på, istedenfor GameState
+        .Må bare ha en metode: model.getCurrentLevel(). Skal bakes inn i ViewableModelInterface. Kall denne i drawGameText()
+
+    4. Guang - Healthpoints viser som hjerter istedenfor et tall. F.ex 3 hjerter hvis du har tre liv.
+        .Trenger en hjerte-sprite 25x25 px. 
+        .Ha en metode i View: drawHearts();
+            .Kan bruke cellSize når størrelsen på bildet skal defineres.
+
+    5. Nora - Ved GameOver -> Ha tekst som forteller om du gikk tom for tid eller døde.
+        .Hvis GameOver && secondsUntilGameOver > 0: skriv "You were killed by ghosts". 
+
+    6. Jostein - Hvis vi får tid: ha retning og/eller animasjon på player og fiender.
+        .Lage enkle animasjoner for player og ghosts.
+        .Både fiender og player må ha en retnings-variabel som er "RIGHT", eller "LEFT".
+        .Hvis animasjon: player og fiender må ha en animasjonsIndex-variabel (f.ex int). 
+            .LibGDX har kanskje gode funksjoner her?
+            .StateTime?
+        .Denne informasjonen må bakes inn i et eget Interface, f.ex AnimatedViewableEntity
+
+    7. Inana - Ha en powerup som er +1 hearts
+        .Lag en hjertePowerup-sprite
+        .Hvis man får mer enn 3 healthpoints, sett healthpoints til 3. 
+
+
+Torsdag 18. april:
+    Tilstede: Jostein, Aida, Nora, Anders, Guang
+
+    Gjort i dag:
+    - Sett på nye implementasjoner
+        ▪ Vi har fått animasjoner
+        ▪ Man kan gå til neste level
+    - Bug: spilleren blir av og til usynlig før den tar skade igjen
+    - Bug: spilleren tar ikke skade flere ganger når en fiende står lengre på samme posisjon, de må da bevege seg inn i hverandre på nytt
+    - Jobbet videre med oppgaver vi har fra før eller funnet nye oppgaver i gruppetimen, også jobbet med bugsene
+
+    Til neste gang:
+    - Lage flere brett, alle kan lage forslag hvis de ønsker det
+    - Hvis man har implementert noe nytt, skrive tester til dette hvis det mangler
+
+
+Mandag 22. april:
+    Tilstede: Jostein, Aida, Nora, Guang, Inana
+
+    Gjort i dag:
+    - Fikset bug: spilleren tar ikke skade flere ganger når en fiende står lengre på samme posisjon, de må da bevege seg inn i hverandre på nytt
+    - Snakket om DefaultEnemySpeed og enemySpeed i constants og controller for å kunne manipulere farten fiendene beveger seg i
+    - Jobbet med egne oppgaver, det som trengs rundt om i koden
+
+    Skrive krav:
+    - Animasjoner 
+    - Ny powerup med hjerte
+    - Tydeligere formidlinger til spiller gjennom tekst:
+        ▪ Tekst som forklarer hvorfor det blir gameOver
+        ▪ Tekst som sier hvilket level vi er på
+        ▪ Tekst som sier om du går videre til neste level eller om du er ferdig med alle level
+        ▪ Tekst som forklarer spillet på start skjermen
+
+    Kan gjøres:
+    - Fjerne ubrukte imports
+    - Lage flere brett
+
+    Til neste gang:
+    Anders:
+    - Test: globalTimerTest(), skrive om på denne
+    - Fullføre eller fjerne to-does i AudioPlayer
+
+    Jostein:
+    - Ser på tilbakemeldingene i forhold til View og jobber med dette
+
+    Aida:
+    - Rydde i koden; player og bomb
+
+    Guang:
+    - Finne ut hvordan test-coverage regnes ut
+    - Justere størrelsen på hjertene som symboliserer healthpoints
+    - Skrive krav:
+        ▪ Ny powerup med hjerte
+        ▪ Tydeligere formidlinger til spiller gjennom tekst
+
+    Inana:
+    - Skrive krav: animasjoner, se på dokumentet som er vedlagt i referat fra mandag 15. april
+    - Se på animasjoner til powerUp
+
+    Nora:
+    - Metoder i GameView som kalles av BomberMan
+        ▪ Interface eller flytte metoder til GameView
+
+
+Torsdag 25. april
+    Tilstede: Jostein, Aida, Nora, Guang, Anders
+
+    Jobbet med i dag og videre:
+    Nora:
+    - setLevel() i GameModel; ikke laste inn ny LevelReader, men bruke funksjonalitet vi allerede har i LevelReader:setNewLevel()
+    Aida:
+    - Tekst når vi plukker opp en powerup; ha tekst som forklarer hva denne powerupen gjør
+    Guang:
+    - Vise max bombs på skjermen; ha et tall på skjermen som viser hvor mange bomber spilleren kan legge ut
+    Jostein:
+    - Ta vekk konstruktør i LevelReader
+    Anders:
+    - Lage brett
+
+
+Mandag 29. april:
+    Tilstede: Jostein, Aida, Nora, Guang, Anders, Inana
+
+    Gjort i dag:
+    - Laget nytt interface TestableModel for public metoder som bare brukes i tester
+    - Ryddet litt opp i GameModel generelt
+    - Skrevet prosjektrapport 
+
+    Arbeidsoppgaver:
+    Jostein:
+    - Renskrive oblig4
+    Nora:
+    - Sende referat for å innføre i oblig4
+    Aida:
+    - Prøve å rydde i GameView
+    - Sentrere powerup tekst
+    Guang:
+    - Lage klassediagram
+    - Dra gameinfo tekst lenger opp i GameView
+    Inana:
+    - Tegne powerup animasjoner
+    Anders:
+    - Lage brett
+    - Rydde i kode og finskrive
+
+    For alle:
+    - Slette ubrukte imports
+    - Slette ubrukt kode
+    - Skrive javadoc hvis det mangler
+
